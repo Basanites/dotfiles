@@ -147,6 +147,10 @@ super + alt + shift + {h,j,k,l}
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
+#
+# Audio/Media controls 
+#
+
 XF86AudioRaiseVolume
 	sh -c "pactl set-sink-mute 12 false ; pactl set-sink-volume 12 +5%"
 
@@ -158,3 +162,15 @@ XF86AudioMute
 
 XF86AudioMicMute
 	pactl set-source-mute 16 toggle
+
+XF86AudioPlay
+	playerctl play-pause
+
+XF86AudioStop
+	playerctl stop
+
+XF86AudioNext
+	playerctl next
+
+XF86AudioPrev
+	playerctl previous 
