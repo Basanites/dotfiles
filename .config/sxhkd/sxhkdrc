@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + space
-	dmenu_run
+	rofi -show run	
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -19,14 +19,14 @@ super + Escape
 #
 
 # quit bspwm normally
-super + alt + Escape
-	bspc quit
+#super + alt + Escape
+#	bspc quit
 
 
 # refresh or quit bspwm
-#super + alt + {_,shift + }Escape
-#	{bspc wm -d > "$BSPWM_STATE" && bspc quit, \
-#	 bspc quit 1}
+super + alt + {_,shift + }Escape
+	{bspc wm -d > "$BSPWM_STATE" && bspc quit, \
+	 bspc quit 1}
 
 # close and kill
 super + {_,shift + }w
@@ -152,13 +152,13 @@ super + {Left,Down,Up,Right}
 #
 
 XF86AudioRaiseVolume
-	sh -c "pactl set-sink-mute 12 false ; pactl set-sink-volume 12 +5%"
+	sh -c "pactl set-sink-mute 0 false ; pactl set-sink-volume 0 +5%"
 
 XF86AudioLowerVolume
-	sh -c "pactl set-sink-mute 12 false ; pactl set-sink-volume 12 -5%"
+	sh -c "pactl set-sink-mute 0 false ; pactl set-sink-volume 0 -5%"
 
 XF86AudioMute
-	pactl set-sink-mute 12 toggle
+	pactl set-sink-mute 0 toggle
 
 XF86AudioMicMute
 	pactl set-source-mute 16 toggle
@@ -174,3 +174,6 @@ XF86AudioNext
 
 XF86AudioPrev
 	playerctl previous 
+
+XF86Launch1
+	i3lock
