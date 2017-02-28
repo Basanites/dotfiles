@@ -24,8 +24,8 @@ width = 100%
 height = 22
 ;offset-x = 1%
 ;offset-y = 1%
-radius = 6.0
-fixed-center = false
+;radius = 6.0
+fixed-center = false 
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -36,19 +36,19 @@ line-color = #f00
 border-size = 2
 border-color = #00000000
 
-padding-left = 0
-padding-right = 0
+padding-left = 1
+padding-right = 1
 
 module-margin-left = 1
 module-margin-right = 1
 
 font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
+font-2 = WunconSiji:pixelsize=10
 
 modules-left = bspwm
 modules-center = xwindow 
-modules-right = filesystem xbacklight volume memory cpu wlan eth battery temperature date powermenu
+modules-right = volume memory cpu wlan eth battery temperature date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -215,11 +215,11 @@ format-disconnected =
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
 ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
@@ -242,7 +242,7 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date = "%d-%m-%Y"
+date = 
 date-alt = " %Y-%m-%d"
 
 time = %H:%M
@@ -257,7 +257,7 @@ label = %date% %time%
 [module/volume]
 type = internal/volume
 
-format-volume = <label-volume> <bar-volume>
+format-volume = <bar-volume>
 label-volume = VOL
 label-volume-foreground = ${root.foreground}
 
@@ -364,6 +364,6 @@ screenchange-reload = true
 
 [global/wm]
 margin-top = 5
-margin-bottom = 5
+margin-bottom = 0
 
 ; vim:ft=dosini
