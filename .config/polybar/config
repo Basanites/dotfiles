@@ -53,10 +53,10 @@ tray-padding = 2
 ;tray-transparent = true
 ;tray-background = #0063ff
 
-;wm-restack = bspwm
+wm-restack = bspwm
 ;wm-restack = i3
 
-;override-redirect = true
+override-redirect = true
 
 ;scroll-up = bspwm-desknext
 ;scroll-down = bspwm-deskprev
@@ -259,6 +259,7 @@ format-underline = ${colors.secondary}
 label = "%output:0:30%"
 exec = .scripts/pkg.sh
 exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
+click-left = st -e update
 
 [settings]
 screenchange-reload = true

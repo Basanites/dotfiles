@@ -6,7 +6,5 @@ check=$((pac + aur))
 if [[ "$check" != "0" ]]
 then
 	echo "$pac %{F#E6E1DC}%{F-} $aur"
-else
-	echo ""
 fi
 
