@@ -38,6 +38,8 @@ setxkbmap -option 'caps:ctrl_modifier'
 xcape -e 'Caps_Lock=Escape'
 xset r rate 330 40
 
+xsetroot -cursor_name left_ptr
+
 sxhkd &
 exec $HOME/.dotfiles/base/.scripts/wm
 
